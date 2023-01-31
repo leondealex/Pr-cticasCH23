@@ -1,0 +1,17 @@
+h1 {
+    color: green
+    font-size: 70px;
+    font-family: sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+p {
+    font-family: sans-serif;
+    color: darkgreen;
+}
+button {
+    background-color: orangered;
+    color: white;
+    border: 0;
+    padding: 20px;
+}
