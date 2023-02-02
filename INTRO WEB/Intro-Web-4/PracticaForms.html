@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./PracticaForms.css">
+    <title>Practica Forms</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; background-color: deepskyblue;">FORMULARIO DE VIAJE</h1>
+
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <form>
+                <h1>Datos Personales</h1>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_email" />
+                </li>
+                <li>
+                    <label for="Phone">Teléfono:</label>
+                    <input type="phone" id="phone" name="user_phone" />
+                </li>
+            </form>
+            <br>
+            <H2>Fechas</H2>
+            <form>
+                Fecha de Nacimiento:
+                <input type="date1" name="birthday">
+                <br>
+                Fecha de Viaje:
+                <input type="date2" name="travel_Date">
+            </form>
+            <br>
+            <h3>Destino(s)</h3>
+            <form>
+                <input type="checkbox" name="Playa" value="Playa"> Playa
+                <input type="checkbox" name="Montaña" value="Montaña"> Montaña
+                <input type="checkbox" name="Desierto" value="Desierto"> Desierto
+            </form>
+            <br>
+            <h4>Acompañantes</h4>
+            <form>
+                (Máximo 4):
+                <input type="number" name="quantity" min="1" max="4">
+            </form>
+
+            <br>
+            <h5>GRACIAS!</h5>
+            <form>
+                <input type="image" id="image" alt="Login" src="./Assets/AmigosViajando.jpg">
+            </form>
+
+
+
+
+            <style>
+                form {
+                    
+                    margin: 0 auto;
+                    width: 400px;
+                  
+                    padding: 1em;
+                    border: 1px solid #CCC;
+                    border-radius: 1em;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                form li+li {
+                    margin-top: 1em;
+                }
+            </style>
+        </ul>
+</body>
+
+</html>
