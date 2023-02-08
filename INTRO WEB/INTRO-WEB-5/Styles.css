@@ -1,56 +1,215 @@
-body{
+body {
     font-family: 'Open sans', Arial, Tahoma;
+    /*La propiedad font-family define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.*/
     font-weight: 400;
+    /*La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold.*/
     font-size: 14px;
+    /*La propiedad font-size especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.*/
     color: rgb(0, 0, 0);
     background: rgb(240, 232, 226);
 }
 
 /*Header*/
-h1{
+h1 {
     text-transform: uppercase;
+    /*La propiedad CSS text-transform especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.*/
     text-align: center;
 }
-h1 span{
-    color:rgb(176, 124, 108)
+
+h1 span {
+    color: rgb(176, 124, 108)
 }
 
-#photo-header{
+#photo-header {
     text-align: center;
     border-bottom-color: rgb(101, 98, 92);
+    /*La propiedad border-bottom-color define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave transparent.*/
     border-bottom-width: 5px;
+    /*border-bottom-width define el ancho del borde inferior de una caja.*/
     border-bottom-style: double;
+    /*border-bottom-style define el estilo de línea del borde inferior de una caja.*/
 }
 
-#photo img{
+#photo img {
     width: 180px;
     height: 180px;
 }
 
-.container{
+.container {
     max-width: 900px;
     background: rgb(238, 240, 241);
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+    /*El margin-bottom CSS (margen-inferior) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.*/
 }
 
-.menu ul{
+.menu ul {
     text-align: center;
     margin: auto;
+    /*La propiedad CSS margin establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: margin-top (en-US), margin-right, margin-bottom y margin-left (en-US).*/
     padding: 0%;
+    /*La propiedad abreviada de CSS padding establece el área de relleno en los cuatro lados de un elemento a la vez.*/
     list-style-type: none;
+    /*El tipo de estilo de lista especifica la apariencia del listado.*/
 }
-.menu ul li{
+
+.menu ul li {
     display: inline-block;
+    /*La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible).*/
     position: relative;
+    /*La propiedad position de CSS especifica cómo un elemento es posicionado en el documento. Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos posicionados.*/
 }
-.menu ul li a{
+
+.menu ul li a {
     background: black;
     color: aliceblue;
     font-size: 10px;
     text-decoration: none;
+    /*La propiedad CSS text-decoration se usa para establecer el formato de texto a subrayado (underline) y suprarrayado (overline), tachado (line-through) o parpadeo (blink). El subrayado y el suprarrayado son posicionados bajo el texto, mientras la línea a través de éste se posiciona por encima.*/
     display: block;
     padding: 3px;
+
+}
+
+.menu ul li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    list-style-type: none;
+    display: none;
+    height: auto;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    width: 60px;
+    height: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+/*Fin del header*/
+
+
+
+h2 {
+    color: rgb(176, 124, 108);
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: "// ";
+}
+
+.clearfix:before {
+    display: table;
+    line-height: 1;
+    content: "/";
+}
+
+.pull-left {
+    float: left;
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+col-10 {
+    width: 10%;
+}
+
+.col-20 {
+    width: 60%;
+}
+
+col-90 {
+    width: 90%;
+}
+
+
+/*************/
+
+.education ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.education .year {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.education .description {
+    background: #EEEEEE;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.education .description h3,
+.education .description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.education .description p::after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-right: 8px solid #EEEEEE;
+    top: 5px;
+    left: -16px;
+}
+
+.experience .job .where{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pofesion{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.description{
+margin-top: 0;
+margin-left: 10px;
+text-align: justify;
+}
+
+.containerskill{
+    width: 100%;
+background-color: #DDDDDD;
+}
+.skills{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.html { width: 90%; background-color: green;}
+.css { width: 80%; ;}
+
+
+/******FALTAN SKILLS*******/
+
+
+.star-icon{
+    
 }
