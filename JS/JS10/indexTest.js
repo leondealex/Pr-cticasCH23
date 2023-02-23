@@ -1,0 +1,1 @@
+import {indexTest} from "module";
