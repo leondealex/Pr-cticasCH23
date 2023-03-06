@@ -16,6 +16,8 @@ public class MisColecciones {
 		
 	}
 	
+	
+	
 	private static void mapCollection() {
 		Map miMap = new HashMap();	
 		miMap.put("valor1", "Juan");
@@ -49,6 +51,8 @@ public class MisColecciones {
 
 	}
 	
+		
+		
 	private List listasCollections() {
 		
 		List miLista = new ArrayList();
