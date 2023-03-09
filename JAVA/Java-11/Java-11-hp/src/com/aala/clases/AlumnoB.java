@@ -1,10 +1,11 @@
 package com.aala.clases;
 
 public class AlumnoB extends PersonaP {
-private int matricula;
-private double promedio;
-public AlumnoB(int matricula, double promedio) {
-	
+	private int matricula;
+	private double promedio;
+
+public AlumnoB(int matricula, double promedio, String nombre, int edad) {
+	super(nombre, edad);
 	this.matricula = matricula;
 	this.promedio = promedio;
 }
@@ -23,6 +24,14 @@ public void setPromedio(double promedio) {
 @Override
 public String toString() {
 	return "AlumnoB [matricula=" + matricula + ", promedio=" + promedio + "]";
+}
+public void mostrarDatos() {
+	System.out.println(this.getNombre()+" "+this.getEdad()+" "+this.promedio);
+
+}
+public void mostrarDatos(String apellido) {
+	System.out.println(this.getNombre()+" "+apellido+" "+this.getEdad()+" "+this.getMatricula()+" "+this.promedio);
+
 }
 
 }

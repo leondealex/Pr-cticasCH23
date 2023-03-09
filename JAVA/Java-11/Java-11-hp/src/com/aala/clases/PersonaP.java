@@ -3,6 +3,7 @@ package com.aala.clases;
 public class PersonaP {
 	private String nombre;
 	private int edad;
+	
 	public PersonaP(String nombre, int edad) {
 		
 		this.nombre = nombre;
