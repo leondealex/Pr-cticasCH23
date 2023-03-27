@@ -9,17 +9,25 @@ import com.generation.cohorte23.jpa.model.UsuarioModel;
 import com.generation.cohorte23.jpa.repositories.UsuarioRepositorio;
 
 @Service
-
 public class UsuarioServices {
+	
 	@Autowired
-	UsuarioRepositorio usuariorepositorio;
-
-	public ArrayList<UsuarioModel> busquedaPorPrioridad(Integer prioridad) {
-		return usuariorepositorio.busquedaPorPrioridad(prioridad);
-	}
-
+	UsuarioRepositorio usuarioRepositorio;
+	
 	public ArrayList<UsuarioModel> ListarUsuarios() {
-		return (ArrayList<UsuarioModel>) usuariorepositorio.findAll();
+		return (ArrayList<UsuarioModel>) usuarioRepositorio.findAll();
 	}
 
+	public UsuarioModel guardarUsuario(UsuarioModel usuario) {
+		return usuarioRepositorio.save(usuario);
+	}
+	
+	public ArrayList<UsuarioModel> obtenerPorPrioridad(Integer prioridad) {
+		return usuarioRepositorio.findByPrioridad(prioridad);
+	}
+
+	
+	
+
+	
 }
