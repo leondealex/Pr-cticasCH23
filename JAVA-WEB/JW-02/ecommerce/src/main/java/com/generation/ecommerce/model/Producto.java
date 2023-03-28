@@ -65,6 +65,11 @@ public class Producto {
 		this.precio = precio;
 	}
 
-	
+	//toString(sobreescritura de metodos)
+		@Override
+		public String toString() {
+			return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", uRL_Imagen="
+					+ uRL_Imagen + ", precio=" + precio + "]";
+		}
 	
 }
