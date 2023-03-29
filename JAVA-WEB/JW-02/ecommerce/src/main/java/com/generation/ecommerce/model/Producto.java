@@ -1,7 +1,23 @@
 package com.generation.ecommerce.model;
 
-public class Producto {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 	
+	@Entity
+	
+	@Table(name = "Producto")
+	
+	
+public class Producto {
+
+		
+		@Id
+		@GeneratedValue
+		
+	
+
 	//Atributos
 	private Long id;
 	private String nombre;
@@ -12,7 +28,7 @@ public class Producto {
 	//Constructor vacío para el jackson (serializar y deserializar un objeto JAVA a JSON)
 	public Producto() {
 		
-	}
+	}//Constructor vacío
 	
 	//Constructor con todos los campos
 	public Producto(Long id, String nombre, String descripcion, String URL_Imagen, double precio) {
@@ -21,7 +37,9 @@ public class Producto {
 		this.descripcion = descripcion;
 		this.URL_Imagen = URL_Imagen;
 		this.precio = precio;
-	}
+	}//Constructor con todos los campos
+	
+	
 	
 	//Getters & Setters
 
@@ -53,8 +71,8 @@ public class Producto {
 		return URL_Imagen;
 	}
 
-	public void setURL_Imagen(String uRL_Imagen) {
-		URL_Imagen = uRL_Imagen;
+	public void setURL_Imagen(String URL_Imagen) {
+		URL_Imagen = URL_Imagen;
 	}
 
 	public double getPrecio() {
@@ -69,7 +87,7 @@ public class Producto {
 		@Override
 		public String toString() {
 			return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", uRL_Imagen="
-					+ uRL_Imagen + ", precio=" + precio + "]";
-		}
+					+ URL_Imagen + ", precio=" + precio + "]";
+		}//toString
 	
-}
+}//Clase Producto
